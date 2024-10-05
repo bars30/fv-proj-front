@@ -1,11 +1,6 @@
-.container:nth-child(1) {
+.container {
  display: flex;
  justify-content: space-between;
-
-}
-.container:nth-child(1) button {
- display: block;
- margin: initial;
 }
 
 .spreadsheet {
@@ -15,14 +10,17 @@
 }
 
 .row {
- display: flex;
+ width: 100%;
+ display: grid;
+ grid-template-columns: repeat(9, minmax(100px, 1fr)); /* Creates a responsive grid */
+ gap: 10px; /* Spacing between grid items */
  margin-bottom: 10px;
+ /* grid-template-columns: repeat(auto-fill, 100px); */
+ grid-gap: 10px
 }
 
 .cell {
- width: 100px;
  height: 30px;
- margin-right: 10px;
  padding: 5px;
  border: 1px solid #ccc;
  border-radius: 5px;
@@ -30,6 +28,48 @@
 .highlight {
  border: 2px solid blue; /* Highlight the selected cell */
 }
+
 .cell:hover {
  cursor: pointer; /* Change cursor to pointer when hovering over a cell */
 }
+
+/* -------- */
+.notification {
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ text-align: center;
+ background: linear-gradient(360deg, #9fc6e6, #9fc6e6, #9fc6e6cf, transparent);
+ padding: 95px 40px 65px 40px;
+}
+
+.notification h2 {
+ color: #133f97;
+ font-weight: 900;
+ font-size: 27px;
+ margin-bottom: 5px;
+}
+.notification h4 {
+ width: 41%;
+ margin: auto;
+ color: #0d224d;
+ padding-bottom: 13px;
+}
+
+.notification a {
+ display: block;
+ padding: 15px 40px;
+ background-color: #ffffff;
+ width: fit-content;
+ margin: auto;
+ border-radius: 38px;
+}
+.notification a {
+ text-decoration: none;
+ font-weight: 800;
+ color: #133f97;
+}
+
+
+

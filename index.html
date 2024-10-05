@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Page</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/start.css">
-  </head>
-  <body>
-  
-    <div class="cont">
-      <div id="register">
-        <h2>Register</h2>
-        <input type="email" id="registerEmail" placeholder="Email" required>
-        <input type="password" id="registerPassword" placeholder="Password" required>
-        <button onclick="register()">Sign Up</button>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Home</title>
+ <link rel="stylesheet" href="./css/home.css">
+ <link rel="stylesheet" href="./css/style.css">
+ <link rel="stylesheet" href="./css/home-res.css">
+</head>
+<body>
+<div class="cell-cont">
+  <div class="container toolbar-cont">
+    <h3 class="email"> </h3>
+    <button onclick="signOut()" class="signOutButton">Sign Out</button>
+   </div>
+   <div class="container">
+    <div id="spreadsheet" class="spreadsheet">
+      <div class="row" id="row">
+          <input type="text" id="A1" class="cell" oninput="updateCells()" placeholder="Cell A1">
+          <input type="text" id="A2" class="cell" oninput="updateCells()" placeholder="Cell A2">
+          <input type="text" id="A3" class="cell" oninput="updateCells()" placeholder="Cell A3">
+          <input type="text" id="A4" class="cell" oninput="updateCells()" placeholder="Cell A4">
+          <input type="text" id="A5" class="cell" oninput="updateCells()" placeholder="Cell A5">
+          <input type="text" id="A6" class="cell" oninput="updateCells()" placeholder="Cell A6">
+          <input type="text" id="A7" class="cell" oninput="updateCells()" placeholder="Cell A7">
+          <input type="text" id="A8" class="cell" oninput="updateCells()" placeholder="Cell A8">
+          <input type="text" id="A9" class="cell" oninput="updateCells()" placeholder="Cell A9">
+          <!-- Add more inputs if needed -->
       </div>
-    
-      <div id="login">
-        <h2>Login</h2>
-        <input type="email" id="loginEmail" placeholder="Email" required>
-        <input type="password" id="loginPassword" placeholder="Password" required>
-        <button onclick="login()">Sign In</button>
-      </div>
-    </div>
+  </div>
+   </div>
   
-    <div id="dataInput" style="display: none;">
-      <h2>Введите данные</h2>
-      <input type="text" id="inputData" placeholder="Введите данные" required>
-      <button onclick="sendData()">Отправить данные</button>
-      <p id="result"></p>
-    </div>
+   <button onclick="addRow()">Add Row</button>
   
+</div>
+<div class="notification">
+    <h2>Create an account to gain access</h2>
+  <h4>This feature is exclusively available to users with an account. If you don't have an account yet,
+    you can easily create one to gain full access</h4>
+  <a href="./reg.html">Update</a>
 
-  
-
-  <script src="./js/script.js">
-  
-  </script>
+</div>
+ <script src="./js/home.js"></script>
 </body>
 </html>

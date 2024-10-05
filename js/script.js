@@ -2,7 +2,7 @@
 window.onload = function() {
   const token = localStorage.getItem('token'); // Check if token exists
   if (token) {
-    window.location.href = './home.html'; // Redirect if token found
+    window.location.href = './index.html'; // Redirect if token found
   }
 };
 
@@ -31,7 +31,7 @@ async function register() {
     alert('Registration successful! User ID: ' + json.userId);
     localStorage.setItem('token', json.token); // Save token in local storage
     localStorage.setItem('email', email);
-    window.location.href = './home.html'; // Redirect to home after registration
+    window.location.href = './index.html'; // Redirect to home after registration
   } catch (error) {
     console.error(error.message);
     alert(error.message); // Display error to user
@@ -92,7 +92,7 @@ async function login() {
     alert('Login successful! Token: ' + json.token);
     localStorage.setItem('token', json.token); // Save token in local storage
     localStorage.setItem('email', email);
-    window.location.href = './home.html'; // Redirect to home after login
+    window.location.href = './index.html'; // Redirect to home after login
   } catch (error) {
     console.error(error.message);
     alert(error.message); // Display error to user

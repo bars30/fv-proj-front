@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/start.css">
+  </head>
+  <body>
+  
+    <div class="cont">
+      <div id="register">
+        <h2>Register</h2>
+        <input type="email" id="registerEmail" placeholder="Email" required>
+        <input type="password" id="registerPassword" placeholder="Password" required>
+        <button onclick="register()">Sign Up</button>
+      </div>
+    
+      <div id="login">
+        <h2>Login</h2>
+        <input type="email" id="loginEmail" placeholder="Email" required>
+        <input type="password" id="loginPassword" placeholder="Password" required>
+        <button onclick="login()">Sign In</button>
+      </div>
+    </div>
+  
+    <div id="dataInput" style="display: none;">
+      <h2>Введите данные</h2>
+      <input type="text" id="inputData" placeholder="Введите данные" required>
+      <button onclick="sendData()">Отправить данные</button>
+      <p id="result"></p>
+    </div>
+  
+
+  
+
+  <script src="./js/script.js">
+  
+  </script>
+</body>
+</html>
